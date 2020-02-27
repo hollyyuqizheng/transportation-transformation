@@ -22,3 +22,4 @@ results = client.get("wrvz-psew", limit=2000)
 # Convert to pandas DataFrame
 results_df = pd.DataFrame.from_records(results)
 results_df.to_csv("C:\\Users\\CodeB\\Documents\\GitHub\\transportation-transformation\\data\\chicago\\chicago_taxi_2000_rows.csv")
+print(results_df.describe)
