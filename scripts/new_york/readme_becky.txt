@@ -22,4 +22,4 @@ Data is directly available at http://web.mta.info/developers/data/nyct/subway/St
 Data is available as CSVs online (here's Feb 22, 2020: http://web.mta.info/developers/data/nyct/fares/fares_200222.csv). Didn't download, can easily work with it on Pandas.
 
 -- Turnstile usage --
-Data is available at http://web.mta.info/developers/data/nyct/turnstile/turnstile_200222.txt (and for various other dates). For whatever foolish reason, it's a txt file that's comma-separated. Not really a problem, we can still download it and use pd.read_csv. Haven't downloaded it.
+Data is available at http://web.mta.info/developers/data/nyct/turnstile/turnstile_200222.txt (and for various other dates). You can get other dates at http://web.mta.info/developers/turnstile.html. For whatever foolish reason, it's a txt file that's comma-separated. Not really a problem, we can still download it and use pd.read_csv. Haven't downloaded it.
