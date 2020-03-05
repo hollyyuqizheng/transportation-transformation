@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "transportation-transformation",
+  "private_key_id": "c1d64d4f7367e155304e7cf838ae61834c1c568d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCmQahmSYtRNlDp\nUP0Wl9EiTiUyQPZBxUu4zysCpTANJr/r1so8boC7PbbW5rByMFp5f8UDEV6cSgl3\n/Nju3WTI3lzSiOhIZmGxFYJsBrIPtGtd8+4XuZ5PFjhewNM4AQzK0EfNIpnL+SpH\njbi3JIuV4V9MgG0IeAj+h7fHi5vVZk0JhBD4RqBkbhP7rpIvvO/GLwAeE0+UaULR\nzlTnlopYtRnFoBenDIqyMn3DHdnVRUK9gQ/r72eZQD2eWX4XSO80sps7x9BZvSBb\nNiBFzBkU5li8WkMOVPmSzzhAzheus6JBXTJNn9hYeuHF55vpgI2uBq+lypObWc8A\n+UXV1cxjAgMBAAECggEACKILZAWqnVvl88h0UFbaWNC8GIAafsTOiCrk3ct22pG/\nXvER6Z/43Zyb7vce2hOGzke/rzlDgbBof5J29tKIUPBP23t8yS4Vk1Pvb0nMmxea\n3hbJkvHrPK2F3bRfcZ6j5K/sW28K6NnSvJhT1fZFOtIaJnH3ohiq4uUTHf7dddN+\nfV9ZsZR4+e8QT9Gfii73+Ed4/H0MBVGOKU1pGMg/Jv+c73ET7NKl3Gc8eRGGdJpi\nqNSN785xwZV9MQJu3dxeglopWthCNDxNBZDBx4aTqLHKwsyYwEEfGWh6al95YID5\n9eOESyRnHigMMkW9tVaIuftsdmS6rvkyAML41XHqXQKBgQDkINBcfG07jX5YfI04\nRPnkSJrQ/fJjxqrjTjONYK/X0O/jj0l8mSvAEp2Z4XO4hvGWeehC8yI9gYZ3cH4c\na5YOZ8rm2HJ9LHFnpOicRYn9bTaFs1Qf0d8anp2FNPRAcMFreOITNtJpWmbubfAp\nyeLqfcBqtAUIiSY8Xs5LzBSqfwKBgQC6ka1LElTdmhZ1swzBBWqhMYzRJk2TYX/f\nuSom6YbK7VXfhrvKispX7JXZIWTkAfJAZNbZzve71nX1Jlu+dh2Uep+rBIXL3rVz\nIz00AW9gVlqau9+IyEMEKeiM+vd6WwlRz+euNDOGkC0f+Y7OojUdHOE8ZReOJPI3\nG2Ba8+uEHQKBgD5FGrr0F9j2oXND5ERkx5VhoCjF+MD1fLX5JadEqhsN5D1IYnXJ\nVaDjM/PKD41iAFXjxttnhIQnc+3sXfAiCd66xC7JDE9Qr0/sOrZVYPo1MnnCXocl\nAXJBs5ulvbpNTO6qG4PFJiAt1gTlK3Ysrmz1kG1P4EPZM/+snUEhXs6/AoGADANt\nYTQg+tP9Nj79R0COCSsjoiQRQrg4f7Nwn2jSISb/LJGEbhpZxSeazoxz7qqharwT\niZrmINZCajK6HZ2FchYjSePUqbgBfxR50Gt3PIDS/Lu0PR6IEjCQpONUJDDQfNAi\nXvlFiBiojzKGm4+eU+2UI0tvJNwELMA6iCDEvZECgYEAy+Wu6EkI/+fmCdHi8PYU\nTndTwZ2YnTW+JjWIXUj4Ft/7h1syDorJEV6vUKtHFuYYIKMejUbWtl/ZdlNeJbkr\nGRvW+V/ULHlJfJLaTnvyPmqKXXEdpH2U/seR70R6awWmEekfO4f7abqrmqy7qvzi\nTS+KGrgWhCee6sN+VqS5fJs=\n-----END PRIVATE KEY-----\n",
+  "client_email": "data-scraping@transportation-transformation.iam.gserviceaccount.com",
+  "client_id": "103112747137181684010",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/data-scraping%40transportation-transformation.iam.gserviceaccount.com"
+}
