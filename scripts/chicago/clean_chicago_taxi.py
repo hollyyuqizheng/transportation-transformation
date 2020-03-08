@@ -26,9 +26,9 @@ print("daily ridership descriptive stats: ", desc_stats)
 duplicated = df.duplicated()
 print(duplicated.value_counts())
 
-# desc_stats_dict = desc_stats.to_dict()
-# with open("chi_taxi_2019_01_daily_ridership.json", "w") as fout:
-#     json.dump(desc_stats_dict, fout)
+desc_stats_dict = desc_stats.to_dict()
+with open("chi_taxi_2019_01_daily_ridership.json", "w") as fout:
+    json.dump(desc_stats_dict, fout)
 
 # TODO: output format?
 # TODO: Drop census tracts, community areas, tips, tolls, extras, payment_type, locations, computed region, company
