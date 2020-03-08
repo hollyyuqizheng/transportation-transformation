@@ -1,0 +1,23 @@
+
+The Chicago Transit Authority has publicly available open data sets regarding ridership on its L line train stations and we were able to access data sets containing information on average monthly train ridership per station. This dataset tallies ridership information monthly from 2001 through 2019.
+
+This dataset contains ridership information for the Chicago CTA subway from the year of 2019. The data is presented in a tab-separated tsv file. This dataset was created by joining two publicly available datasets from Chicago CTA: one on the monthly usage data for each subway station between 2001-2019, and another on the information about each subway station's location coordinate and station id.
+
+—————————————————————————————————————
+Columns:
+
+- station_id: id of the subway station
+- station_name: name of subway station
+- year: year of this data -- this is 2019 for the entire dataset
+- month_beginning: date of the beginning of each month, which is the 1st day of each month
+- avg_weekday: ???
+- avg_saturday: ???
+- avg_sunday: ???
+- month_total: ???
+- lat/long: coordinate for the station
+
+
+—————————————————————————————————————
+Sample file:
+
+The sample is in chicago_cta_ridership_sample.tsv, which contains 30 randomly selected rows from the entire cleaned dataset. By visually inspecting the entries, the distribution of these samples is even across different months of 2019, so this sample is representative of the entire 2019 Chicago subway ridership dataset. 
