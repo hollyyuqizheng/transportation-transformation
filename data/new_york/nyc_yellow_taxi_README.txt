@@ -1,7 +1,7 @@
 New York City Yellow Taxi Trip data was collected by Melia Okura and Becky Mathew. 
 ----------------------------------------------------------------------------------
 I. Source 
-This dataset contains ridership information from a Freedom of Information Law request on the New York Taxi and Limousine Commission. The full dataset is too large to host on GitHub, but you can access it at https://drive.google.com/file/d/1DwtqPVg_EgN4x7gevIHhBvR-wzmnCiBb/view?usp=sharing. The original data did not have the latitude and longitude data, which we added using scripts/new_york/nyc_taxi_zone_shapefile.py
+This dataset contains ridership information from a Freedom of Information Law request on the New York Taxi and Limousine Commission. The full dataset is too large to host on GitHub, but you can access it at https://drive.google.com/file/d/1DwtqPVg_EgN4x7gevIHhBvR-wzmnCiBb/view?usp=sharing. The original data did not have the latitude and longitude data, which we added using scripts/new_york/nyc_taxi_zone_shape.py. A sample of the top 50 rows can be found at data/new_york/2019_Yellow_Taxi_Sample.csv. 
 
 ----------------------------------------------------------------------------------
 II. Data format

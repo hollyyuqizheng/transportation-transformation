@@ -2,7 +2,7 @@ All Chicago taxi data was collected by Becky Mathew.
 ----------------------------------------------------
 I. Source 
 
-This dataset contains information about taxi rides in Chicago in 2019. All the Chicago taxi data comes from the City of Chicago's official data portal. Data was collected using the SodaPy API, and the script for collection can be found in scripts/chicago/chicago_taxi.py. The full dataset is available at https://data.cityofchicago.org/Transportation/Taxi-Trips/wrvz-psew/data. If needed, we can collect data from earlier years from this site as well. 
+This dataset contains information about taxi rides in Chicago in 2019. All the Chicago taxi data comes from the City of Chicago's official data portal. Data was collected using the SodaPy API, and the script for collection can be found in scripts/chicago/chicago_taxi.py. The full dataset is available at https://data.cityofchicago.org/Transportation/Taxi-Trips/wrvz-psew/data. If needed, we can collect data from earlier years from this site as well. A sample of 50 rows can be found at data/chicago/chicago_taxi_sample.csv. I will be discussing a larger sample, which is at data/chicago/chicago_taxi_2019_01.csv
 
 ----------------------------------------------------
 II. Data format 
