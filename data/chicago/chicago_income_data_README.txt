@@ -8,3 +8,5 @@ Columns:
 	- Average household income for this zip code
 
 While this information may have significantly changed since 2010, we will use this information to normalize information about transportation density and accessibility because it is representative of income disparities and general inequality which can inform our analysis.
+
+The chicago_income_data.csv is a tab-separated csv file which contains all of the zip codes for Chicago. After some rudimentary inspection, the distribution seems to be fairly consistent, with an expected degree of variation across zip codes.
