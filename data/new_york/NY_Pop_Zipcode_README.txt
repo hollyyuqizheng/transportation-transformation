@@ -2,6 +2,9 @@ I. Source:
   This data comes from a public table which can be found at https://www.newyork-demographics.com/zip_codes_by_population
   The information from this table has the following citation:
       United States Census Bureau. B01001 SEX BY AGE, 2018 American Community Survey 5-Year Estimates. U.S. Census Bureau, American Community Survey Office. Web. 19 December 2019. http://www.census.gov/.
+   
+   We modified our dataset from the original in that in the original there was one row per rank so some rows represented multiple zip codes. We separated the zipcodes so that there are multiple rows with the same rank but each row only represents
+one zipcode. This will make it easier to join the data with other data sets by zipcode.
       
 ------------------------------------------------------------------------
 
