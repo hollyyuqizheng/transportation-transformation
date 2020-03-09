@@ -10,11 +10,11 @@ Columns:
 - station_name: name of subway station
 - year: year of this data -- this is 2019 for the entire dataset
 - month_beginning: date of the beginning of each month, which is the 1st day of each month
-- avg_weekday: ???
-- avg_saturday: ???
-- avg_sunday: ???
-- month_total: ???
-- lat/long: coordinate for the station
+- avg_weekday: the average ridership for each weekday within the specified month
+- avg_saturday: the average ridership for each saturday within the specified month
+- avg_sunday: the average ridership for each sunday within the specified month
+- month_total: the total ridership at the specified station for the given month
+- lat/long: coordinates for the station
 
 
 —————————————————————————————————————
