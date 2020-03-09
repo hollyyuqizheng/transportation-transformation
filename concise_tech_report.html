@@ -17,7 +17,8 @@
         <font face="verdana" color="slategray">n</font></b>
     </font><br>
     Team members: Stephanie Carrero (scarrero), Melia Okura (mokura), Holly Zheng (yzheng40), Becky Mathew (rmathew7)<br>
-    <a href="https://github.com/hollyyuqizheng/transportation-transformation/tree/master/data" target="_blank">Link to GitHub repo </a> <br>
+    <a href="https://github.com/hollyyuqizheng/transportation-transformation/tree/master/data" target="_blank">Link to GitHub repo</a> <br>
+    <a href="https://drive.google.com/file/d/1DwtqPVg_EgN4x7gevIHhBvR-wzmnCiBb/view?fbclid=IwAR2CWCpUxKT68r7ngo8FI_zwyLaWrJh1heJxqOKAewIbo4LUfg-EeD4LQWQ" target="_blank">Link to Google Drive</a> (New York taxi data) <br>
     <br>
 </head>
 
@@ -34,6 +35,7 @@
         <li><a href="#ny_pop">New York Population and Demographics </a></li>
         <li><a href="#chicago_subway">Chicago Subway </a></li>
         <li><a href="#chicago_taxi">Chicago Taxi </a></li>
+        <li><a href="#chicago_income">Chicago Income </a></li>
         <li><a href="#chicago_pop">Chicago Population and Demographics </a></li>
         <li><a href="#summary">Summary </a></li>
     </ul>
@@ -120,7 +122,8 @@
         <li id="ny_pop"> <b> New York population and demographics </b> <a href="#content">Back to top</a>
             <ol>
                 <li> How did you collect your data? How is the source? <br>
-
+                    This population data was publicly available on a New York demographics that is run by Cubit. I scraped the data from the table that is provided on the website. <br>
+                    The source is reputable, since they are making use of Census information to make their tables. <br>
                     <br>
                 </li>
 
@@ -131,14 +134,20 @@
                 </li>
                 <li>
                     How is the data distributed? <br>
+                    There are over 1600 data points, and we care about most of them, or at least the ones that are mapable to the public transportation data. <br>
+                    I think it is enough data for the portion of the project that it is applicable to, <br>
+                    which is defining "good" transportation by looking how much public transportation is provided in areas wtih varying populations.<br>
                     <br>
                 </li>
                 <li>
                     Are there any duplicates? Missing values? <br>
+                    There are no duplicated data points as there is only one population per zip code. <br>
+                    There are no missing values. But there are no zip codes that have 0 people, so I do not know if that information exists and was chosen to be excluded from the set. <br>
                     <br>
                 </li>
                 <li>
                     Are there any data type issues? Did you have to throw away any data? <br>
+                    I do not need to throw any data away from this set. <br>
                     <br>
                 </li>
                 <li>
@@ -231,7 +240,38 @@
               </ol>
           </li>
 
-          <li id="chicago_pop"> <b> Chicago population and demographics </b> <a href="#content">Back to top</a>
+          <li id="chicago_income"> <b> Chicago income </b> <a href="#content">Back to top</a>
+              <ol>
+                  <li> How did you collect your data? How is the source? <br>
+                      I collected this data by accessing the datasets publicly available on the Zip Atlas website which compile 2010 Census information for each zip code. <br>
+                      The source is reputable, as this information comes from official 2010 census demographics. <br>
+                      <br>
+                  </li>
+
+                  <li>
+                      Additional considerations while collecting data? <br>
+                      Income demographics may have changed drastically in 10 years as new housing developments can be built and gentrification is extremely prevalent. <br>
+                      <br>
+                  </li>
+                  <li>
+                      How is the data distributed? <br>
+                      There are 55 zip codes in Chicago and each row contains information about average household income as well as latitiude and longitude information to map to train stops. <br>
+                      This should be enough data to analyze subway density by zipcode and compare it to income demographics and population. <br>
+                      <br>
+                  </li>
+                  <li>
+                      Are there any duplicates? Missing values? <br>
+                      <br>
+                  </li>
+                  <li>
+                      Are there any data type issues? Did you have to throw away any data? <br>
+                      The latitude and longitude information is denoted as two numbers separated by commas. This may not be a problem however, as most of our location data is in this format. <br>
+                      <br>
+                  </li>
+              </ol>
+          </li>
+
+          <li id="chicago_pop"> <b> Chicago Population and Demographics </b> <a href="#content">Back to top</a>
               <ol>
                   <li> How did you collect your data? How is the source? <br>
 
@@ -240,7 +280,6 @@
 
                   <li>
                       Additional considerations while collecting data? <br>
-
                       <br>
                   </li>
                   <li>
