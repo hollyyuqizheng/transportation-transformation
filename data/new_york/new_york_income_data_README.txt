@@ -18,3 +18,5 @@ Columns:
 While this information may have significantly changed since 2010, we will use this information to normalize information about transportation density and accessibility because it is representative of income disparities and general inequality which can inform our analysis. Moreover, the expansion of NYC subway lines may have an impact on income demographics as gentrification increases.
 
 Missing data was obtained from Statistical Atlas which also sourced income information from the 2010 census. Moreover, some zip codes with no information represented extremely small areas such as a building or block and were always encompassed by a larger zip code. Therefore, these smaller zip codes were deleted. The zip codes in the dataset should still represent comprehensive coverage of the city. The only other outlier is the World Trade Center, which has its own zip code, and accordingly an average household income of 0.
+
+The new york income data.csv file is a tab-separated csv file containing all of the information for New York zip codes.
