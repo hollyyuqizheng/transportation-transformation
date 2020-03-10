@@ -1,6 +1,8 @@
 The data containing information about New York MTA subway turnstile usage is in the folder "ny_turnstile_2019" on the Repo. This folder contains 12 separate files, each containing information on New York subway turnstile usage for a month in 2019. There is also a sample of the data in turnstile_sample.tsv
 
-The ridership data was publicly available on New York MTA's website as text files. We downloaded all the files for 2019 MTA ridership information. We also downloaded data from the same site containing information of MTA stations across the city. We joined these two datasets by matching each entry in the ridership data with the corresponding longitude/latitude coordinate from the station information data. The subway data was hosted on AWS and was available in gtfs-realtime format. 
+The ridership data was publicly available on New York MTA's website as text files. Sources: http://web.mta.info/developers/turnstile.html
+http://web.mta.info/developers/MTA-Subway-Time-historical-data.html
+We downloaded all the files for 2019 MTA ridership information. We also downloaded data from the same site containing information of MTA stations across the city. We joined these two datasets by matching each entry in the ridership data with the corresponding longitude/latitude coordinate from the station information data. The subway data was hosted on AWS and was available in gtfs-realtime format. 
 
 
 —————————————————————————————————————
