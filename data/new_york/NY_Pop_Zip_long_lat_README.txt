@@ -7,13 +7,14 @@ I. Source:
   a latitude and longitude column to the original dataset.
    
    We modified our dataset from the original in that in the original there was one row per rank so some rows represented multiple zip codes. We separated the zipcodes so that there are multiple rows with the same rank but each row only represents
-one zipcode. This will make it easier to join the data with other data sets by zipcode.
+one zipcode. This will make it easier to join the data with other data sets by zipcode. But, in joining the two datasets there
+were some rows that got dropped because I think there were some zipcodes that were not common between the two datasets. 
       
 ------------------------------------------------------------------------
 
 II. Data Format:
-    The full dataset contains 1754 rows, one for each zipcode that is represented. Each row shows the rank among the rest 
-    of the zipcodes, zipcode and population for that zipcode.
+    The full dataset contains 1589 rows, one for each zipcode that is represented. Each row shows the rank among the rest 
+    of the zipcodes, zipcode, population for that zipcode and the latitude and longitude for that code. 
     
     Columns:
       - Rank: The zipcodes rank amongst the rest of the zip codes in the dataset. Multiple zip codes with the same population
