@@ -12,7 +12,7 @@ import sys
 
 def split_data(data, prob):
 	"""
-   	input:
+	   input:
 	data: a list of pairs of x,y values
 	prob: the fraction of the dataset that will be testing data, typically prob=0.2
 	output: two lists with training data pairs and testing data pairs
@@ -60,56 +60,62 @@ if __name__=='__main__':
 		#TODO:
 		#1. Use pandas to load data from the file. Here you can also re-use most of the code from part I.
 		#2. Select which independent variables best predict the dependent variable count.
-		data = pd.read_csv(file_path)
+		data = pd.read_csv(file_path, delimiter="\t")
 		df = pd.DataFrame(data)
 
-        # TODO: correct taxi ride name
-		y = df["taxi_rides"]
-
-		# TODO: drop irrelevant columns
-		X = df.drop(["casual", "registered", "cnt", "instant", "dteday", "workingday"], axis=1)
+		y = df["taxi_records"]
+		X = df.drop(["lat", "long", "station_id", "station_name", "year", "zipcode", "taxi_records"], axis=1)
 
 		# create dummy variables from month
-        dummy_month = sm.categorical(X["month"], drop=True)
-        dummy_month_df = pd.DataFrame(dummy_month)
-        # drop one of the columns to have linear independence
-        dummy_month_df = dummy_month_df.drop([0], axis=1)
-        # rename for human legibility
-        dummy_month_df.columns = ["february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
+		dummy_month = sm.categorical(X["month_beginning"], drop=True)
+		dummy_month_df = pd.DataFrame(dummy_month)
+
+		# drop one of the columns to have linear independence
+		dummy_month_df = dummy_month_df.drop(dummy_month_df.columns[0], axis=1)
+		# rename for human legibility
+		dummy_month_df.columns = ["february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
 
 		# drop original categorical columns
-		X = X.drop(["month"], axis=1)
+		X = X.drop(["month_beginning"], axis=1)
 		frames = [X, dummy_month_df]
 		# concatenate dummy variables onto X dataframe
 		X = pd.concat(frames, axis=1)
 
+		print(X.head)
+
+		print(X.dtypes)
+
 		for i in range(len(X.columns.values)):
 			print(i + 1, X.columns.values[i])
+
 		y = y.to_numpy()
 		X = X.to_numpy()
 
 		return X, y
 
-    X, y = load_file("../../data/chicago/")
-    try:
-        opts, args = getopt.getopt(argv, "hc:t:", ["city=", "type="])
-    except getopt.GetoptError:
-        print "regression.py -c <city_name> -t <pickup_or_dropoff>"
-        sys.exit(2)
-    # if opts[0] == '-h':
-    #     print "regression.py -c <city_name> -t <pickup_or_dropoff> \n <city_name> can be 'chicago' or 'new_york'"
-    #     sys.exit()
-    # elif opts[0] in ["-c", "--city"]:
-    #     city_arg = arg
-    #     if opts[1] in ["-t", "--type"]:
-    #         type_arg = arg
-    #
-    #     if arg == "chicago":
-    #         X, y = load_file("../../data/chicago/", "chicago")
-    #     elif arg == "new_york":
-    #         X, y = load_file("../../data/new_york/", "new_york")
-    #     else:
-    #         print
+	X, y = load_file("chicago_cta_combined_pickup.tsv")
+
+	# try:
+	#     opts, args = getopt.getopt(argv, "hc:t:", ["city=", "type="])
+	# except getopt.GetoptError:
+	#     print "regression.py -c <city_name> -t <pickup_or_dropoff>"
+	#     sys.exit(2)
+
+
+	# if opts[0] == '-h':
+	#     print "regression.py -c <city_name> -t <pickup_or_dropoff> \n <city_name> can be 'chicago' or 'new_york'"
+	#     sys.exit()
+	# elif opts[0] in ["-c", "--city"]:
+	#     city_arg = arg
+	#     if opts[1] in ["-t", "--type"]:
+	#         type_arg = arg
+	#
+	#     if arg == "chicago":
+	#         X, y = load_file("../../data/chicago/", "chicago")
+	#     elif arg == "new_york":
+	#         X, y = load_file("../../data/new_york/", "new_york")
+	#     else:
+	#         print
 
 	##################################################################################
 	# TODO: use train test split to split data into x_train, x_test, y_train, y_test #
@@ -126,8 +132,9 @@ if __name__=='__main__':
 	#################################################################################
 
 	# TODO: should we be adding constants?
-	x_train = sm.add_constant(x_train)
-	x_test = sm.add_constant(x_test)
+	# x_train = sm.add_constant(x_train)
+	# x_test = sm.add_constant(x_test)
+
 	model = sm.OLS(y_train, x_train)
 	results = model.fit()
 	predictions = results.predict(x_test)
