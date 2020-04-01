@@ -24,7 +24,7 @@ zipcode_df["lon"] = lons
 
 # Dictionary of community areas to zipcode
 ca_to_zipcode = {}
-with open("community_area_to_zipcode.json", "r") as fin:
+with open("C:\\Users\\CodeB\\Documents\\GitHub\\transportation-transformation\\data\\chicago\\taxi_new\\community_area_to_zipcode.json", "r") as fin:
     ca_to_zipcode = json.load(fin)
 
 def get_zipcode(lat, lon, ca):
@@ -54,18 +54,18 @@ def get_zipcode(lat, lon, ca):
 # Dictionary of zipcode to dictionary of month to frequency
 # For example: {60601: {1: 50, 2: 25, ...}, ...}
 pickup_zipcode_to_month_freq = {}
-with open("pickup_zipcode_to_month_freq.json", "r") as fin:
-    pickup_zipcode_to_month_freq = json.load(fin)
+# with open("pickup_zipcode_to_month_freq.json", "r") as fin:
+#     pickup_zipcode_to_month_freq = json.load(fin)
 
-for zc in pickup_zipcode_to_month_freq.keys():
-    pickup_zipcode_to_month_freq[zc]["5"] = 0
+# for zc in pickup_zipcode_to_month_freq.keys():
+#     pickup_zipcode_to_month_freq[zc]["5"] = 0
 
 dropoff_zipcode_to_month_freq = {}
-with open("dropoff_zipcode_to_month_freq.json", "r") as fin:
-    dropoff_zipcode_to_month_freq = json.load(fin)
-
-for zc in dropoff_zipcode_to_month_freq.keys():
-    dropoff_zipcode_to_month_freq[zc]["5"] = 0
+# with open("dropoff_zipcode_to_month_freq.json", "r") as fin:
+#     dropoff_zipcode_to_month_freq = json.load(fin)
+#
+# for zc in dropoff_zipcode_to_month_freq.keys():
+#     dropoff_zipcode_to_month_freq[zc]["5"] = 0
 
 def insert_day(df, month):
     """
@@ -96,7 +96,7 @@ client = Socrata("data.cityofchicago.org",
                 None)
 
 # Get taxi data per day in 2019
-for month in range(7, 13):
+for month in range(1, 13):
     month_str = str(month)
     if len(month_str) == 1:
         month_str = "0" + month_str
