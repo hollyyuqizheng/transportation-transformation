@@ -1,62 +1,80 @@
 <html>
 <head>
-    <font size="30"><b>Transportation
-        <font face="verdana" color="red">T</font>
-        <font face="verdana" color="lightsalmon">r</font>
-        <font face="verdana" color="orange">a</font>
-        <font face="verdana" color="yellow">n</font>
-        <font face="verdana" color="green">s</font>
-        <font face="verdana" color="orchid">f</font>
-        <font face="verdana" color="steelblue">o</font>
-        <font face="verdana" color="navy">r</font>
-        <font face="verdana" color="purple">m</font>
-        <font face="verdana" color="pink">a</font>
-        <font face="verdana" color="seagreen">t</font>
-        <font face="verdana" color="wheat">i</font>
-        <font face="verdana" color="maroon">o</font>
-        <font face="verdana" color="slategray">n</font></b>
-    </font><br>
-    Analysis Deliverable<br>
-    Team members: Stephanie Carrero (scarrero), Melia Okura (mokura), Holly Zheng (yzheng40), Becky Mathew (rmathew7)<br>
-    <br>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transporation-transformation-analysis-deliverable</title>
 </head>
 
 <body>
-    Overview: <br>
-    This report contains our progress on the analysis part of the project.
-    <br>
-    To go to each section separately: <br>
-    <ul id="content">
-        <li><a href="#hypothesis">Hypothesis</a></li>
-        <li><a href="#stats">Stats models</a></li>
-        <li><a href="#viz">Visualizations</a></li>
-    </ul>
 
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="page-header center">
+            <!-- <h1>Transportation-Transformation</h1> -->
+            <b>Transportation
+                <font face="verdana" color="red">T</font>
+                <font face="verdana" color="lightsalmon">r</font>
+                <font face="verdana" color="orange">a</font>
+                <font face="verdana" color="yellow">n</font>
+                <font face="verdana" color="green">s</font>
+                <font face="verdana" color="orchid">f</font>
+                <font face="verdana" color="steelblue">o</font>
+                <font face="verdana" color="navy">r</font>
+                <font face="verdana" color="purple">m</font>
+                <font face="verdana" color="pink">a</font>
+                <font face="verdana" color="seagreen">t</font>
+                <font face="verdana" color="wheat">i</font>
+                <font face="verdana" color="maroon">o</font>
+                <font face="verdana" color="slategray">n</font></b> <br>
+            Stephanie Carrero (scarrero), Melia Okura (mokura), Holly Zheng (yzheng40), Becky Mathew (rmathew7) <br>
+            <h1> Analysis Deliverable </h1>
+        </div>
+        <h1> Hypothesis </h1>
+        <!-- <h6> Small header</h6> -->
+        <p>
+        Our hypothesis is that there is a significant linear relationship between the dependent variable of taxi rides within a zip code and the independent variables of the number of station stations, the total number of subway rides, the population, and the average personal income of the same zip code.
 
-  <ul>
-      <ul>
-          <li id="hypothesis"> <b> Overview of our hypothesis </b> <a href="#content">Back to top</a> <br>
-               <ol>
-                  <li>
+        <h1>Exploratory Visualization </h1>
+            <p>
+                We started off with some exploratory visualizations to illustrate some of the independent variables such as income and population. <br>
+                We plotted histograms to document the average household income and population per zip code for Chicago.
+                <img src="viz_for_handin/Chicago_Income_Zip_Code_Viz.png" width="600"/> <br>
+                <img src="viz_for_handin/Chicago_Pop_Zip_Code_Viz.png" width="600"/> <br>
 
-                  </li>
+                The horizontal axis of these histograms represents different zip codes, so the numerical values of the zip codes do not matter. While these histograms do not explain the correlation, they merely serve to represent the disparities in population and income that are related to disparities in transportation accessibility and quality. <br>
 
-            </ol>
-        </li>
+                As a further measure of exploratory visualization, we documented the average train pickups and dropoffs by zip code in Chicago.
+                We might have chosen to communicate the result as average monthly pickups/dropoffs per station location instead.
+                Our histograms do not require any other contextualization other than the axis and the title. <br>
+                <img src="viz_for_handin/Chicago_Train_Dropoff_Zip_Code_Viz.png" width="600"/> <br>
+                <img src="viz_for_handin/Chicago_Train_Pickup_Zip_Code_Viz.png" width="600"/> <br>
 
-        <li id="stats"> <b> Our Stats techniques</b> <a href="#content">Back to top</a> <br>
+                We then examined scatter plots of the datasets hoping to see if there are patterns between our independent and dependent variables. We decided to use
+                scatter plots so that we can see where each data point lies on a graph with two of the variables we are examining, and from there we hoped to be able to
+                see some initial trends that we would test against using regressions. <br>
 
-        </li>
+                When plotting for Chicago, we had to remove 5 zip code data points, because the numbers of taxi rides in these zip codes are significantly higher than other zip codes in the city. <br>
+                Removing these extreme data points allowed us to have cleaner scatter plots where the points spread out in the range of the axis. <br>
 
-        <li id="viz"> <b> Visualizations </b> <a href="#content">Back to top</a> <br>
+                From these initial scatter plots, we managed to see weak correlation between our independent variables and the number of taxi rides in Chicago. For example, for the zip codes that have more subway rides, the number of taxi rides is also higher. <br>
+                <img src="viz_for_handin/chicago_pickup_vs_subway_rides.png" width="600"/> <br>
 
-        </li>
+                Another scenario we see from these initial scatter plots that is a little surprising is that population does not seem to correlate with the number of taxi rides within a zip code.<br>
+                <img src="viz_for_handin/chicago_pickup_vs_population.png" width="600"/> <br>
 
-  </ul>
+                The initial scatter plots for New York City, however, show messier results with less obvious correlations.<br>
+                <img src="viz_for_handin/ny_dropoff_vs_subway.png" width="600"/><br>
 
+        <h1>Regressions & Analysis </h1>
 
+        <h1> Future steps </h1>
+        <p>
+            As mentioned in the Stats section, we plan to do more regressions and difference testings with our data. We also plan to present more advanced visualizations such as bubble maps and heat maps, using libraries from Plotly and OpenStreetMap.
 
+    </div>
+</div>
 
 </body>
-
 </html>
