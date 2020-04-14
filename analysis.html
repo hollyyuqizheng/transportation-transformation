@@ -40,16 +40,18 @@
             <p>
                 We started off with some exploratory visualizations to illustrate some of the independent variables such as income and population. <br>
                 We plotted histograms to document the average household income and population per zip code for Chicago.
+                These histograms allowed us to see what kind of underlying demographics is behind our transportation datasets of the two cities, which
+                made us to include population and income as two of our independent variables for our regression tasks later. 
                 <img src="viz_for_handin/Chicago_Income_Zip_Code_Viz.png" width="600"/> <br>
                 <img src="viz_for_handin/Chicago_Pop_Zip_Code_Viz.png" width="600"/> <br>
 
                 The horizontal axis of these histograms represents different zip codes, so the numerical values of the zip codes do not matter. While these histograms do not explain the correlation, they merely serve to represent the disparities in population and income that are related to disparities in transportation accessibility and quality. <br>
 
-                As a further measure of exploratory visualization, we documented the average train pickups and dropoffs by zip code in Chicago.
+                <!-- As a further measure of exploratory visualization, we documented the average train pickups and dropoffs by zip code in Chicago.
                 We might have chosen to communicate the result as average monthly pickups/dropoffs per station location instead.
                 Our histograms do not require any other contextualization other than the axis and the title. <br>
                 <img src="viz_for_handin/Chicago_Train_Dropoff_Zip_Code_Viz.png" width="600"/> <br>
-                <img src="viz_for_handin/Chicago_Train_Pickup_Zip_Code_Viz.png" width="600"/> <br>
+                <img src="viz_for_handin/Chicago_Train_Pickup_Zip_Code_Viz.png" width="600"/> <br> -->
 
                 We then examined scatter plots of the datasets hoping to see if there are patterns between our independent and dependent variables. We decided to use
                 scatter plots so that we can see where each data point lies on a graph with two of the variables we are examining, and from there we hoped to be able to
@@ -64,8 +66,10 @@
                 Another scenario we see from these initial scatter plots that is a little surprising is that population does not seem to correlate with the number of taxi rides within a zip code.<br>
                 <img src="viz_for_handin/chicago_pickup_vs_population.png" width="600"/> <br>
 
-                The initial scatter plots for New York City, however, show messier results with less obvious correlations.<br>
-                <img src="viz_for_handin/ny_dropoff_vs_subway.png" width="600"/><br>
+                The initial scatter plots for New York City, however, show messier results with less obvious correlations. Here, we plotted Chicago and NYC's taxi pickups vs. income, organized by zip code. <br>
+                <img src="viz_for_handin/combined_scatter_pickup_vs_income.png" width="600"/><br>
+                It is interesting to see how the NYC taxi rides data points aggregate toward lower left corner, corresponding to the lower income. Visualizations like these where we combine the two cities'
+                distributions together will lead us to perform difference testing as one of our next steps.
 
         <h1>Regressions & Analysis </h1>
 
