@@ -7,10 +7,11 @@ import folium as folium
 import json
 
 df = pd.read_csv("/Users/Stephanie/Desktop/transportation-transformation-master/data/chicago/chicago_cta_combined_dropoff.csv")
-df = df[["zipcode","income","population"]]
+df = df[["zipcode","income","population","month_total"]]
 df['zipcode'] = df['zipcode'].astype('str')
 df = df.drop_duplicates()
 df["population"] = df["population"].apply(lambda x: x.replace(",","")).astype(int)
+df["month_total"] = df["month_total"].apply(lambda x: x.replace(",","")).astype(int)
 
 with open('/Users/Stephanie/Desktop/transportation-transformation-master/data/chicago/Boundaries - ZIP Codes.geojson','r') as chicago_geo:
     geo_data = json.load(chicago_geo)
@@ -53,22 +54,22 @@ def map_feature_by_zipcode(zipcode_data, col):
         # col: feature of interest
         columns=['zipcode', col],
         key_on='feature.properties.zip',
-        fill_color='OrRd',
-        fill_opacity=0.7,
-        line_opacity=0.2,
+        fill_color='GnBu',
+        fill_opacity=0.65,
+        line_opacity=0.3,
         legend_name='average zip code ' + col,
-        line_color = 'white',
+        line_color = 'black',
         line_weight = 2
     ).add_to(m)
 
     folium.LayerControl().add_to(m)
 
     # Save map based on feature of interest
-    m.save(col + '.html')
+    m.save("chicago_train_" + col + '.html')
 
     return m
 
-map_feature_by_zipcode(df, 'population')
+map_feature_by_zipcode(df, 'month_total')
 
 
 # FOLIUM INFO SOURCE: https://medium.com/@sosterburg/mapping-data-with-folium-356f0d6f88a9
